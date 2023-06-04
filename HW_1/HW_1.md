@@ -55,7 +55,7 @@
 
 ## 6. Method: GET, EndPoint: `/object_info_4`
 
-![HW_1/6.png](6.png) 
+![HW_1/6.png](6.png)  
 #### Click on `Duplicate`
 #### In the `Enter URL or paste text field`, enter: `Protocol, IP, Port and EndPoint`
 ### In `Params` enter data as documentation
