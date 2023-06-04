@@ -6,7 +6,7 @@
 
 
 ## 1. Get request:
-![img_6.png](img_6.png)
+![Home/Git/Postman/HW_1/img_2.png](img_2.png)   
 
 #### Create new collection through ```+``` with name ```HW 1```
 #### In the current collection, create requests in Postman, click on ``` add a request``` and name``` get request```
