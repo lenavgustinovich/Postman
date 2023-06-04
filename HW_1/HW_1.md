@@ -1,7 +1,7 @@
 ## Create requests in Postman.
 
 ## 1. Exercise :
-![img.png](img.png) 
+![img_6.png](img_6.png)
 
 ### Create new collection through ```+``` with name ```HW 1```
 ### In the current collection, create requests in
