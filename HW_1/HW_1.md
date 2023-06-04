@@ -24,8 +24,13 @@
 #### Change the request name to ```post request```
 #### Choose ```post```method
 #### In the ```Enter URL or paste text field```, enter: ```Protocol, IP, Port and EndPoint```
-#### In ``` form-date``` enter data as documentation
+#### In `form-date` enter data as documentation
 ![img_5.png](img_5.png)
+
+## 3. Get method, EndPoint: `/object_info_1`
+![photo_12.jpg](photo_12.jpg)
+
+
 
 
 
