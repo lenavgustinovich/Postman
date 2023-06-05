@@ -16,7 +16,7 @@
 ![img_1.png](/HW_1_Screenshot/img_1.png)  
 
 ## 2. Post request:
-![img_3.png](//HW_1_Screenshot/img_3.png) 
+![img_3.png](/HW_1_Screenshot/img_3.png) 
 
 #### Click on ```Duplicate``` 
 ![img_4.png](/HW_1_Screenshot/img_4.png) 
@@ -32,10 +32,10 @@
 #### Choose `Get` method
 #### In the `Enter URL or paste text field`, enter: `Protocol, IP, Port and EndPoint`
 ### In `Params` enter data as documentation
-![Screenshot48.png](//HW_1_Screenshot/Screenshot48.png) 
+![Screenshot48.png](/HW_1_Screenshot/Screenshot48.png) 
 
 ## 4. Method: GET, EndPoint: `/object_info_2`
-![52.png](//HW_1_Screenshot/52.png) 
+![52.png](/HW_1_Screenshot/52.png) 
 
 #### Click on `Duplicate`
 #### In the `Enter URL or paste text field`, enter: `Protocol, IP, Port and EndPoint`
