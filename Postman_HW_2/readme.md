@@ -20,7 +20,20 @@
 ### 3. Parse response body to json.
 `var RespData = pm.response.json();`
 ### 4. Test that name in the response is equal to name is request (tnter manually)
-pm.test("Check test name", function () {
+    pm.test("Check test name", function () {
    
     pm.expect(RespData.name).to.eql("Lena");
-});
+    });
+### 5. Test that age in the response is equal to age is request (tnter manually)
+    pm.test("Check test name", function () {
+   
+    pm.expect(RespData.name).to.eql("Lena");
+    });
+   
+### 5. Test that salary in the response is equal to salary is request (tnter manually)
+    pm.test("Check test salary", function () {
+    
+    pm.expect(RespData.salary).to.eql(70);
+    });
+![2023-06-05 20-58-02.png](/HW_1_Screenshot/2023-06-05%2020-58-02.png) 
+
