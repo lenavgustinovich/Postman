@@ -1,4 +1,5 @@
 # Postman HW_2
+# 1.`Get` method, EndPoint:`/first`
 ### 1. Send a request `http://162.55.220.72:5005/first`
 ### 2. Status code 200
 `pm.test("Status code is 200", function () {
@@ -9,8 +10,8 @@
     pm.expect(pm.response.text()).to.include("This is the first responce from server!ss");
 });`
 ![q.png](/HW_1_Screenshot/q.png) 
-#
-#
+
+# 2. `Post` method, EndPoint: `/user_info_3`
 ### 1. Send a request `http://162.55.220.72:5005/user_info_3`
 ### 2. Status code 200
 `pm.test("Status code is 200", function () {
