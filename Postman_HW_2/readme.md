@@ -79,4 +79,45 @@
 `var Resp = pm.response.json();`
 ### 4. Parsing request.
 `var Req = pm.request.url.query.toObject()`
-### 5.     
+### 5. Test that name in the response body is equal to name in request ( take name from request)
+    pm.test("Check resp name=req name", function () {
+   
+    pm.expect(Resp.name).to.eql(Req.name);
+    });
+### 6.  Test that age in the response body is equal to age in request ( take name from request)       
+    pm.test("Check resp age-req age ", function () {
+   
+    pm.expect(Resp.age).to.eql(Req.age);
+    });
+### 7.  Test that salary in the response body is equal to salary in request ( take name from request)    
+    pm.test("Check resp salary=req salary", function () {
+   
+    pm.expect(Resp.salary).to.eql(Number(Req.salary));
+    });   
+
+ ![3-06-0623-36-53.png](/HW_1_Screenshot/3-06-0623-36-53.png)
+
+ ### 8. Output parameter family to console from response.
+ `console.log(Resp.family)`
+ ### 9.  Test that parameter dog has parameter name.
+    pm.test("Check the dog have name ", function () {
+   
+    pm.expect(Resp.family.pets.dog).to.property("name");
+    });
+### 10. Test that parameter dog has parameter age.
+    pm.test("Check the dog have age ", function () {
+   
+    pm.expect(Resp.family.pets.dog).to.property("age");
+    });
+### 11. Test that parameter name has a value Luky.
+    pm.test("Check the dog_name=Luky ", function () {
+   
+    pm.expect(Resp.family.pets.dog.name).to.eql("Luky");
+    });  
+### 12. Test that parameter age has a value 4.      
+    pm.test("Check the dog_age=4 ", function () {
+   
+    pm.expect(Resp.family.pets.dog.age).to.eql(4);
+    }); 
+![23-06-06 23-47-55.png](/HW_1_Screenshot/23-06-06%2023-47-55.png)     
+
