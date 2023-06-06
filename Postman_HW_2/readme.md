@@ -17,7 +17,7 @@
 `pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });`
-### 3. Parse response body to json.
+### 3. Parsing response body to json.
 `var RespData = pm.response.json();`
 ### 4. Test that name in the response is equal to name is request (tnter manually)
     pm.test("Check test name", function () {
@@ -67,3 +67,16 @@
     pm.expect(RespData.family.u_salary_1_5_year).to.eql(Req.salary * 4);
     });
 ![2023-06-05 22-08-06.png](/HW_1_Screenshot/2023-06-05%2022-08-06.png) 
+
+ # 3. `Get` method, EndPoint: /object_info_3
+### 1. Send a request ` http://162.55.220.72:5005/object_info_3?name=Lena&age=30&salary=70 `
+### 2. Status code 200
+    pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+    });
+![6-06 23-26-50.png](/HW_1_Screenshot/6-06%2023-26-50.png)
+### 3. Parsing response body to json.
+`var Resp = pm.response.json();`
+### 4. Parsing request.
+`var Req = pm.request.url.query.toObject()`
+### 5.     
