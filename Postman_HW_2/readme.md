@@ -168,4 +168,3 @@
   
     pm.expect(Resp.salary[2]).to.eql(String(Req.salary * 3));
     });
-    
