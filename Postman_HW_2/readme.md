@@ -68,7 +68,7 @@
     });
 ![2023-06-05 22-08-06.png](/HW_1_Screenshot/2023-06-05%2022-08-06.png) 
 
- # 3. `Get` method, EndPoint: /object_info_3
+ # 3. `Get` method, EndPoint:` /object_info_3`
 ### 1. Send a request ` http://162.55.220.72:5005/object_info_3?name=Lena&age=30&salary=70 `
 ### 2. Status code 200
     pm.test("Status code is 200", function () {
@@ -121,3 +121,51 @@
     }); 
 ![23-06-06 23-47-55.png](/HW_1_Screenshot/23-06-06%2023-47-55.png)     
 
+# 4. `Get` method, EndPoint: `/object_info_4`
+### 1. Send a request ` hhttp://162.55.220.72:5005/object_info_4?name=Lena&age=30&salary=70 `
+### 2. Status code 200
+    pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+    });
+### 3. Parsing response body в json.
+`var Resp = pm.response.json();`
+### 4. Parsing request.
+ `var Req = pm.request.url.query.toObject()`    
+ ![14-56-05.png](/HW_1_Screenshot/14-56-05.png) 
+### 5. Test that name in the response body is equal to name in request ( take name from request)
+    pm.test("Check resp.name=req.name", function () {
+  
+    pm.expect(Resp.name).to.eql(Req.name);
+    });
+### 6. Test that age in the response body is equal to age in request ( take name from request) 
+    pm.test("Check resp.age=req.age", function () {
+  
+    pm.expect(Resp.age).to.eql(Number(Req.age));
+    });  
+![15-00-25.png](/HW_1_Screenshot/15-00-25.png)   
+### 7.  Output parameter salary to console from request.
+`console.log(Req.salary) `
+### 8.  Output parameter salary to console from response.
+`console.log(Resp.salary) `
+### 9.  Output 0 element of parameter salary to console from response.
+`console.log(Resp.salary[0]) `
+### 10. Output 1 element of parameter salary to console from response.
+`console.log(Resp.salary[1])`
+### 11. Output 2 element of parameter salary to console from response.
+` console.log(Resp.salary[2])`
+### 12. Test that 0 element of parameter salary is equal to salary in request(take salary from request)
+    pm.test("Check resp.[0]=req.salary", function () {
+   
+    pm.expect(Resp.salary[0]).to.eql(Number(Req.salary));
+    });
+### 13. Test that 1 element of parameter salary is equal to salary*2 in request(take salary from request)   
+    pm.test("Check resp.[1]=req.salary*2", function () {
+  
+    pm.expect(Resp.salary[1]).to.eql(String(Req.salary * 2));
+    });
+### 14. Test that 2 element of parameter salary is equal to salary*3 in request(take salary from request)      
+    pm.test("Check resp.[2]=req.salary*3", function () {
+  
+    pm.expect(Resp.salary[2]).to.eql(String(Req.salary * 3));
+    });
+    
