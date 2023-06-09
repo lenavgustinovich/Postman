@@ -251,7 +251,8 @@
     pm.expect(Resp[`qa_salary_after_3.5_years`]).to.eql(+ Req.salary * 3.8);
     });
 
-![0-13-08.png](/HW_1_Screenshot/0-13-08.png)
+![20-13-08.png](/HW_1_Screenshot/20-13-08.png)
+
 ![20-14-47.png](/HW_1_Screenshot/20-14-47.png)
 
 ### 19. Test that parameter person 1 element from u_name is equal salary from request ( take salary from request). 
