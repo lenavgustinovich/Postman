@@ -179,3 +179,94 @@
     pm.environment.set("age","30");
 
     pm.environment.set("salary",Req.salary);
+
+
+
+# 5. `Post` method, EndPoint: `/user_info_2`
+### 1. Enter parameter salary from the environment to the request.
+### 2. Enter parameter age from the environment to the request.
+### 3. Enter parameter name from the environment to the request.
+### 4. Send a request.
+![6-46-36.png](/HW_1_Screenshot/6-46-36.png)
+### 5.  Status code 200.
+    pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+    });
+### 6. Parsing response body в json.
+`
+    var Resp = pm.response.json();`
+### 7. Parsing request.
+`var Req = request.data;`
+
+### 8. Test that json response have a parameter start_qa_salary.
+    pm.test("Resp have to start_qa_salary", function () {
+    pm.expect(Resp).to.have.property("start_qa_salary");
+    });
+
+ ### 9. Test that json response have a parameter qa_salary_after_6_months.
+    pm.test("Resp have to qa_salary_after_6_month", function () {
+    pm.expect(Resp).to.have.property("qa_salary_after_6_months");
+    });
+### 10. Test that json response have a parameter qa_salary_after_12_months.  
+    pm.test("Resp have to qa_salary_after_12_month", function () {
+    pm.expect(Resp).to.have.property("qa_salary_after_12_months");
+    });
+### 11. Test that json response have a parameter qa_salary_after_1.5_year.
+    pm.test("Resp have to qa_salary_after_1.5_year", function () {
+    pm.expect(Resp).to.have.property("qa_salary_after_1.5_year");
+    });  
+### 12. Test that json response have a parameter qa_salary_after_3.5_year.    
+    pm.test("Resp have to qa_salary_after_3.5_year", function () {
+    pm.expect(Resp).to.have.property("qa_salary_after_3.5_years");
+    });
+![17-19-38.png](/HW_1_Screenshot/17-19-38.png) 
+### 13. Test that json response have a parameter person.          
+    pm.test("Resp have to person", function () {
+    pm.expect(Resp).to.have.property("person");
+    });
+### 14. Test that parameter start_qa_salary is equal to salary from request ( take salary from request).  
+    pm.test("Check resp.start_salary=request_salary", function () {
+  
+    pm.expect(Resp.start_qa_salary).to.eql(Number(Req.salary));
+    });
+### 15. Test that parameter  qa_salary_after_6_months is equal to salary*2 from request ( take salary from request).     
+    pm.test("Check resp.qa_salary_after_6_months=request_salary*2", function () {
+  
+    pm.expect(Resp.qa_salary_after_6_months).to.eql(+ Req.salary*2);
+    });
+### 16. Test that parameter  qa_salary_after_12_months  is equal to salary*2.7 from request ( take salary from request).    
+    pm.test("Check resp.qa_salary_after_12_months=request_salary*2", function () {
+  
+    pm.expect(Resp.qa_salary_after_12_months).to.eql(+ Req.salary*2.7);
+    });  
+### 17.  Test that parameter qa_salary_after_1.5_year is equal to salary*3.3 from request ( take salary from request).   
+
+    pm.test("Check resp.qa_salary_after_1.5_year=request_salary*3.3", function () {
+  
+    pm.expect(Resp[`qa_salary_after_1.5_year`]).to.eql(+ Req.salary * 3.3);
+    });
+### 18. Test that parameter  qa_salary_after_3.5_years is equal to salary*3.8 from request ( take salary from request).  
+    pm.test("Check resp.qa_salary_after_3.5_years=request_salary*3.3", function () {
+  
+    pm.expect(Resp[`qa_salary_after_3.5_years`]).to.eql(+ Req.salary * 3.8);
+    });
+
+![0-13-08.png](/HW_1_Screenshot/0-13-08.png)
+![20-14-47.png](/HW_1_Screenshot/20-14-47.png)
+
+### 19. Test that parameter person 1 element from u_name is equal salary from request ( take salary from request). 
+    pm.test("Check u_name=request", function () {
+  
+    pm.expect(Resp.person.u_name[2]).to.eql(Number(Req.age));
+    });
+### 20. Test that parameter u_age is equal age from request ( take salary from request). 
+    pm.test("Check u_age=request", function () {
+  
+    pm.expect(Resp.person.u_age).to.eql(Number(Req.age));
+    });
+### 21. Test that parameter u_salary_5_years is equal salary*4.2 from request ( take salary from request). 
+    pm.test("Check resp.u_salary=request_salary*4.2", function () {
+
+    pm.expect(Resp.person.u_salary_5_years).to.eql(+ Req.salary * 4.2);
+    });
+![20-39-06.png](/HW_1_Screenshot/20-39-06.png) 
