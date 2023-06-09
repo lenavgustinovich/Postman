@@ -168,3 +168,12 @@
   
     pm.expect(Resp.salary[2]).to.eql(String(Req.salary * 3));
     });
+### 15. Create a variable name in the enironment.
+### 16. Create a variable age in the enironment.
+### 17. Create a variable salary in the enironment.
+### 18. Send variable name to the environment
+### 19. Send variable age to the environment
+### 20. Send variable salary to the environment
+`pm.environment.set("name","Lena");
+pm.environment.set("age","30");
+pm.environment.set("salary",Req.salary);`
