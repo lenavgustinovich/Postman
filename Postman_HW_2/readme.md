@@ -1,4 +1,4 @@
-# [1.`Get` method, EndPoint:`/first`](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#1get-method-endpointfirst)
+[1.`Get` method, EndPoint:`/first`](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#1get-method-endpointfirst-1)
 
 ### [1. Send a request `http://162.55.220.72:5005/first`](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#1-send-a-request-http16255220725005first)
 ### [2. Status code 200](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#2-status-code-200)
