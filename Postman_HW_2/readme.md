@@ -1,3 +1,9 @@
+[1.`Get` method, EndPoint:`/first`](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#1get-method-endpointfirst)
+
+
+
+
+
 # Postman HW_2
 # 1.`Get` method, EndPoint:`/first`
 ### 1. Send a request `http://162.55.220.72:5005/first`
