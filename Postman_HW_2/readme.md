@@ -174,6 +174,8 @@
 ### 18. Send variable name to the environment
 ### 19. Send variable age to the environment
 ### 20. Send variable salary to the environment
-`pm.environment.set("name","Lena");
-pm.environment.set("age","30");
-pm.environment.set("salary",Req.salary);`
+    pm.environment.set("name","Lena");
+
+    pm.environment.set("age","30");
+
+    pm.environment.set("salary",Req.salary);
