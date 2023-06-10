@@ -271,4 +271,4 @@
 
     pm.expect(Resp.person.u_salary_5_years).to.eql(+ Req.salary * 4.2);
     });
-![20-39-06.png](/HW_1_Screenshot/20-39-06.png) 
+!![08-51-03.png](/HW_1_Screenshot/08-51-03.png) 
