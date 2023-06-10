@@ -1,17 +1,3 @@
-[1.`Get` method, EndPoint:`/first`](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#1get-method-endpointfirst-1)
-
-### [1. Send a request `http://162.55.220.72:5005/first`](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#1-send-a-request-http16255220725005first)
-### [2. Status code 200](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#2-status-code-200)
-### [3. Test that there is a correct string in the body](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#3-test-that-there-is-a-correct-string-in-the-body)
-# [2. `Post` method, EndPoint: `/user_info_3`](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#2-post-method-endpoint-user_info_3)
-### [1. Send a request `http://162.55.220.72:5005/user_info_3`](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#1-send-a-request-http16255220725005user_info_3)
-### [2. Status code 200](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#2-status-code-200-1)
-### [3. Parsing response body to json.](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#3-parsing-response-body-to-json)
-### [4. Test that name in the response is equal to name is request (tnter manually)](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#4-test-that-name-in-the-response-is-equal-to-name-is-request-tnter-manually)
-### [5. Test that age in the response is equal to age is request (tnter manually)](https://github.com/ElenaAvgustinovich1992/Postman/tree/main/Postman_HW_2#5-test-that-age-in-the-response-is-equal-to-age-is-request-tnter-manually)
-
-
-
 
 # Postman HW_2
 # 1.`Get` method, EndPoint:`/first`
