@@ -180,8 +180,19 @@
     pm.environment.set("age","30");
 
     pm.environment.set("salary",Req.salary);
+### 21. Write a loop that will sequentially print the elements of the list from the salary parameter to the console.
 
+    var salary_resp= resp.salary
+    for (let q = 0; q < salary_resp.lenght; q ++ ) {
+    console.log(resp.salary[q])
+    };
 
+### console.log:  
+`1300`
+ 
+`2600`
+ 
+`3900`
 
 # 5. `Post` method, EndPoint: `/user_info_2`
 ### 1. Enter parameter salary from the environment to the request.
@@ -272,3 +283,15 @@
     pm.expect(Resp.person.u_salary_5_years).to.eql(+ Req.salary * 4.2);
     });
 !![08-51-03.png](/HW_1_Screenshot/08-51-03.png) 
+### 22.*** Write a loop that will sequentially print the elements of the list from the person parameter to the console.
+
+    for (item in resp.person){
+    console.log(resp.person[item])
+    }
+### consol.log:
+ 
+`30`
+ 
+`["Lena", 70, 30]`
+ 
+`294`    
