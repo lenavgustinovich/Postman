@@ -19,7 +19,7 @@ password-123
 ![Screenshot from 2023-08-14 21-07-55.png](/HW_1_Screenshot/Screenshot%20from%202023-08-14%2021-07-55.png)
 4. Добавляем переменную token в окружение, как здесь:
 
-![Screenshot from 2023-08-14 21-13-28.png](/HW_1_Screenshot/Screenshot%20from%202023-08-14%2021-13-28.png)
+![Screenshot from 2023-08-14 21-13-28.png](/HW_1_Screenshot/21-13-28.png)
 
 ---
 
