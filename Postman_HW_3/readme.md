@@ -21,6 +21,8 @@ password-123
 
 ![Screenshot from 2023-08-14 21-13-28.png](/HW_1_Screenshot/Screenshot%20from%202023-08-14%2021-13-28.png)
 
+---
+
 # 2. Отправить запрос на  http://162.55.220.72:5005/user_info
 
 ``` 
@@ -130,6 +132,73 @@ pm.test("Validating schema", () => {
 });
 ```
 3. ```В ответе указаны коэффициенты умножения salary, напишите тесты по проверке правильности результата перемножения на коэффициент```
-
+![18-36-27.png](/HW_1_Screenshot/18-36-27.png)
 
 4. ```Достать значение из поля 'u_salary_1.5_year' и передать в поле salary запроса http://162.55.220.72:5005/get_test_user```
+![18-41-26.png](/HW_1_Screenshot/18-41-26.png)
+---
+# 3.http://162.55.220.72:5005/new_data
+```
+req.
+POST
+age: int
+salary: int
+name: str
+auth_token
+
+Resp.
+{'name':name,
+  'age': int(age),
+  'salary': [salary, str(salary*2), str(salary*3)]}
+```
+---
+Тесты:
+1. ```Статус код 200```
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+2. ```Проверка структуры json в ответе```
+```
+const schema = {
+    "type": "object",
+     "required": [
+    "age",
+    "name",
+    "salary"
+  ],
+     "properties": {
+         "age":{
+             "type": "integer"
+         },
+         "name": {
+             "type": "string"
+         },
+         "salary": {
+             "type": "array",
+         "items":[
+             {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+
+         ] }
+     }
+}
+
+pm.test("Validating schema", () => {
+    pm.response.to.have.jsonSchema(schema);
+});    
+```
+3. ```В ответе указаны коэффициенты умножения salary, напишите тесты по проверке правильности результата перемножения на коэффициент```
+![8-54-29.png](/HW_1_Screenshot/8-54-29.png)
+4. ``` Проверить, что 2-й элемент массива salary больше 1-го и 0-го```
+![54.png](/HW_1_Screenshot/54.png)
+
+
