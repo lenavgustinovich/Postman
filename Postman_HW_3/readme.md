@@ -47,8 +47,89 @@ resp:
                                 'u_salary_1.5_year': salary * 4}
                                 }
 ```
-                              
+---
 
-### Tests:
-1. Status code 200
-2. 
+---
+1. Создаем новый пост запрос http://162.55.220.72:5005/user_info
+2. В body raw вставляем json:
+```
+{
+     "age": 30,
+     "salary": 70,
+     "name": "Lena",
+     "auth_token": "{{token}}"
+}
+```
+3. Отправляем запрос
+---
+Тесты:
+1. ```Статус код 200```
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+2. ```Проверка структуры json в ответе```
+```
+const schema = {
+    "type": "object",
+    "required": [
+        "start_qa_salary",
+        "qa_salary_after_6_months",
+        "qa_salary_after_12_months",
+        "person"
+    ],
+    "properties": {
+        "start_qa_salary": {
+            "type": "integer"
+        },
+        "qa_salary_after_6_months": {
+            "type": "integer"
+        },
+        "qa_salary_after_12_months": {
+            "type": "number"
+        },
+        "person": {
+            "type": "object",
+            "required": [
+                "u_name",
+                "u_age",
+                "u_salary_1_5_year"
+            ],
+            "properties": {
+                "u_name": {
+                    "type": "array",
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "items": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "u_age": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "u_salary_1_5_year": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+};
+
+pm.test("Validating schema", () => {
+    pm.response.to.have.jsonSchema(schema);
+});
+```
+3. ```В ответе указаны коэффициенты умножения salary, напишите тесты по проверке правильности результата перемножения на коэффициент```
+
+
+4. ```Достать значение из поля 'u_salary_1.5_year' и передать в поле salary запроса http://162.55.220.72:5005/get_test_user```
