@@ -201,4 +201,94 @@ pm.test("Validating schema", () => {
 4. ``` Проверить, что 2-й элемент массива salary больше 1-го и 0-го```
 ![54.png](/HW_1_Screenshot/54.png)
 
+# 4.http://162.55.220.72:5005/test_pet_info
+
+```
+req.
+POST
+age: int
+weight: int
+name: str
+auth_token
+
+
+Resp.
+{'name': name,
+ 'age': age,
+ 'daily_food':weight * 0.012,
+ 'daily_sleep': weight * 2.5}
+```
+---
+Тесты:
+1. ```Статус код 200```
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+2. ```Проверка структуры json в ответе```
+```
+const schema = {
+ "type": "object",
+   "properties":{
+     "age":{
+         "type": "integer"
+         },
+     "daily_food":{
+        "type": "number"
+    },
+    "daily_sleep": {
+        "type": "number"
+    },
+    "name": {
+        "type": "string"
+    }
+   },
+     "required": [
+         "age",
+    "daily_food",
+    "daily_sleep",
+    "name"
+  ]
+
+}
+
+pm.test("Validating schema", () => {
+    pm.response.to.have.jsonSchema(schema);
+}); 
+```
+3. ```В ответе указаны коэффициенты умножения weight, напишите тесты по проверке правильности результата перемножения на коэффициент```
+![9-15-34.png](/HW_1_Screenshot/9-15-34.png)
+
+# 5. http://162.55.220.72:5005/get_test_user
+```
+req.
+POST
+age: int
+salary: int
+name: str
+auth_token
+
+Resp.
+{'name': name,
+ 'age':age,
+ 'salary': salary,
+ 'family':{'children':[['Alex', 24],['Kate', 12]],
+ 'u_salary_1.5_year': salary * 4}
+  }
+```
+---
+Тесты:
+1. ```Статус код 200```
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+2. ```Проверка структуры json в ответе```
+3. ```Проверить что занчение поля name = значению переменной name из окружения```
+![9-20-26.png](/HW_1_Screenshot/9-20-26.png)
+4. ```Проверить что занчение поля age в ответе соответсвует отправленному в запросе значению поля age```
+![21-13-28.png](/HW_1_Screenshot/21-13-28.png)
+
 
